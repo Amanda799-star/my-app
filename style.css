@@ -1,0 +1,40 @@
+
+.body{
+background:plum;
+max-width: 700px;
+border-radius: 20px;
+padding: 50px;
+display: block;
+margin: 0 auto;
+}
+h1{
+font-size: 70px;
+color: rgba(49, 5, 90, 0.938);
+
+}
+strong{
+    color: rgba(48, 4, 48, 0.932);
+}
+
+#number{
+    font-size: 100px;
+}
+    .flex{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #sun{
+        font-size: 80px;
+    }
+    #input{
+        padding:17px;
+    }
+
+    #submit{
+        padding:17px 35px;
+        background:linear-gradient(to right,blueviolet,purple);
+    }
+    #weather{
+        font-size: 20px;
+    }
