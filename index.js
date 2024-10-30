@@ -13,14 +13,12 @@
       let getCity=document.querySelector("h1")
       let weather=document.querySelector("#number")
       let humidity = response.data.temperature.humidity
-      let windspeed = response.data.wind.speed
-      let windy = document.querySelector("");
       let cold=document.querySelector("#humid");
       getCity.innerHTML=response.data.city;
       weather.innerHTML=`${temp}  ℃`;
       cold.innerHTML=`${humidity}%`;
     
-
+console.log(response.data)
     }
 
 function myForm(event){
