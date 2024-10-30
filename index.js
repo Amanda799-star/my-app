@@ -13,10 +13,13 @@
       let getCity=document.querySelector("h1")
       let weather=document.querySelector("#number")
       let humidity = response.data.temperature.humidity
+      let windspeed =response.data.wind.speed
+      let wind=document.querySelector("#wind")
       let cold=document.querySelector("#humid");
       getCity.innerHTML=response.data.city;
       weather.innerHTML=`${temp}  ℃`;
-      cold.innerHTML=`${humidity}%`;
+      cold.innerHTML = `${humidity}%`;
+      wind.innerHTML = `${windspeed}KM/hr`;
     
 console.log(response.data)
     }
