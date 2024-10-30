@@ -16,9 +16,6 @@
       let windspeed =response.data.wind.speed
       let wind=document.querySelector("#wind")
       let cold = document.querySelector("#humid");
-      let description = response.data.condition.description;
-      let clouds = document.querySelector("cloud-condition");
-      clouds.innerHTML = description;
       getCity.innerHTML=response.data.city;
       weather.innerHTML=`${temp}  ℃`;
       cold.innerHTML = `${humidity}%`;
