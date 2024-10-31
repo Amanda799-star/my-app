@@ -1,11 +1,14 @@
-
-    let day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-    let d =new Date();
-    let days=day[d.getDay()];
-    let hours= d.getHours();
-    let minutes= d.getMinutes();
-    let date=document.querySelector("#time");
-    date.innerHTML=`${days} ${hours}:${minutes}`;
+function formatDate(date) {
+    let day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    let d = new Date();
+    let days = day[d.getDay()];
+    let hours = d.getHours();
+    let minutes = d.getMinutes();
+    if (minutes < 10) {
+        minutes=`0${minutes}`
+    }
+    return`${days}${hours}:${minutes}`
+}
 
 
     function searchEngine(response){
@@ -13,9 +16,12 @@
       let getCity=document.querySelector("h1")
       let weather=document.querySelector("#number")
       let humidity = response.data.temperature.humidity
-      let windspeed =response.data.wind.speed
+     let windspeed = response.data.wind.speed
+        let date = new Date(response.data.time * 1000);
+        let time = document.querySelector("#time");
       let wind=document.querySelector("#wind")
-      let cold = document.querySelector("#humid");
+        let cold = document.querySelector("#humid");
+        time.innerHTML = formatDate(date);
       getCity.innerHTML=response.data.city;
       weather.innerHTML=`${temp}  ℃`;
       cold.innerHTML = `${humidity}%`;
