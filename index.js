@@ -48,3 +48,23 @@ let apiurl=`https://api.shecodes.io/weather/v1/current?query=${city}&key=3adfat7
 
 let form =document.querySelector("#form");
 form.addEventListener("submit",myForm);
+
+function displayForecast() {
+    let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
+    let forecasthtml = "";
+    days.forEach(function (day) {
+        forecastHtml =
+            forecatsHtml +
+            `<div  class="flextemperatures">
+            <div class="weather-day">${day}></div>
+            <div class="weather-icon">🌤</div>
+            ,div class="temperatures-flex">
+            <div class="Degree"><strong>19</strong></div>
+            <div class="Degree">12</div>
+            </div>
+            `
+            ;
+    });
+}
+let multipleFocasts = document.querySelector("#forecast");
+multipleFocasts.innerHTML = forecastHtml;
