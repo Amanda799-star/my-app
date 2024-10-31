@@ -1,8 +1,8 @@
 function formatDate(date) {
     let day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    let days = day[d.getDay()];
-    let hours = d.getHours();
-    let minutes = d.getMinutes();
+    let days = day[date.getDay()];
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
     if (minutes < 10) {
         minutes=`0${minutes}`
     }
