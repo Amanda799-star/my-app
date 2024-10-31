@@ -21,7 +21,7 @@ strong{
 }
 .weather-icon{
    font-size: 100px; 
-   margin-right:70px;
+   margin-right:85px;
 }
     .flex{
         display: flex;
@@ -41,4 +41,7 @@ strong{
     }
     #weather{
         font-size: 20px;
+    }
+    a{
+        text-decoration: none;
     }
