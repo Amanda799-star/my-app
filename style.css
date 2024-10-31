@@ -19,6 +19,9 @@ strong{
 #number{
     font-size: 100px;
 }
+#icon{
+   font-size: 100px; 
+}
     .flex{
         display: flex;
         justify-content: space-between;

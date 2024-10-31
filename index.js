@@ -1,6 +1,5 @@
 function formatDate(date) {
     let day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    let d = new Date();
     let days = day[d.getDay()];
     let hours = d.getHours();
     let minutes = d.getMinutes();
@@ -21,9 +20,12 @@ function formatDate(date) {
     let time = document.querySelector("#time");
     let wind=document.querySelector("#wind")
         let cold = document.querySelector("#humid");
+        let weatherIcon = document.querySelector("#icon");
         let condition = response.data.condition.description
         let tempCondition = document.querySelector("#cloud-condition");
         tempCondition.innerHTML = condition;
+        weatherIcon.innerHTML=`<img src="${response.data.condition.icon_url}" id="icon" />`;
+
     time.innerHTML = formatDate(date);
     getCity.innerHTML=response.data.city;
     weather.innerHTML=`${temp}  ℃`;
