@@ -54,7 +54,7 @@ function displayForecast() {
     let forecasthtml = "";
     days.forEach(function (day) {
         forecastHtml =
-            forecatsHtml +
+            forecastHtml +
             `<div  class="flextemperatures">
             <div class="weather-day">${day}></div>
             <div class="weather-icon">🌤</div>
