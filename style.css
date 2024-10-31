@@ -19,7 +19,7 @@ strong{
 #number{
     font-size: 100px;
 }
-#icon{
+.weather-icon{
    font-size: 100px; 
 }
     .flex{

@@ -24,7 +24,7 @@ function formatDate(date) {
         let condition = response.data.condition.description
         let tempCondition = document.querySelector("#cloud-condition");
         tempCondition.innerHTML = condition;
-        weatherIcon.innerHTML=`<img src="${response.data.condition.icon_url}" id="icon" />`;
+        weatherIcon.innerHTML=`<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
 
     time.innerHTML = formatDate(date);
     getCity.innerHTML=response.data.city;
